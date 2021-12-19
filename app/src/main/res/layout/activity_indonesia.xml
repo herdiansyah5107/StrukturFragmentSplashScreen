@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Indonesia">
+
+    <TextView
+        android:id="@+id/indonesia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="==Struktur Pemerintahan Indonesia=="
+        android:textAlignment="center"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/presiden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Presiden : Joko Widodo \n
+        Wakil Presiden : Kh Amien Ma'ruf \n
+        Negara yang dipimpin :Indonesia \n
+        ibu kota : Jakarta \n
+        Luas wilayah : 5.193.250 km \N
+        Jumlah Provinsi : 34 Provinsi "
+        android:textAlignment="center"
+        android:textSize="20dp"
+        />
+</LinearLayout>

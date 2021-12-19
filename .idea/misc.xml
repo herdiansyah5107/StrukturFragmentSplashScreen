@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_detail.xml" value="0.209375" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_indonesia.xml" value="0.18" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_jawa_barat.xml" value="0.5" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_jawa_timur.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_jawabarat.xml" value="0.20615384615384616" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_jawatengah.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_main.xml" value="0.23880597014925373" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_splash_screen.xml" value="0.2046875" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_indonesia_detail.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawa_barat.xml" value="0.209375" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawa_tengah_list.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawa_timur_detail.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawa_timur_list.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawabarat_detail.xml" value="0.209375" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawabarat_list.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawatengah_detail.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawatimur_list.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_provinsi_detail.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_provinsi_list.xml" value="0.209375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
