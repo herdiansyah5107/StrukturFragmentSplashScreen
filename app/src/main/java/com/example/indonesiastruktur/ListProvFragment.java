@@ -1,20 +1,26 @@
 package com.example.indonesiastruktur;
 
+import android.app.ListFragment;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link JawaBaratDetailFragment#newInstance} factory method to
+ * Use the {@link ListProvFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class JawaBaratDetailFragment extends Fragment {
+public class ListProvFragment extends ListFragment {
+
+    private Listener listener;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,9 +30,8 @@ public class JawaBaratDetailFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private long jawabaratId;
 
-    public JawaBaratDetailFragment() {
+    public ListProvFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +41,11 @@ public class JawaBaratDetailFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment JawaBaratFragment.
+     * @return A new instance of fragment ListFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static JawaBaratDetailFragment newInstance(String param1, String param2) {
-        JawaBaratDetailFragment fragment = new JawaBaratDetailFragment();
+    public static ListProvFragment newInstance(String param1, String param2) {
+        ListProvFragment fragment = new ListProvFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,21 +66,26 @@ public class JawaBaratDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_jawabarat_detail, container, false);
+        String[] names = new String[Provinsi.provinsis.length];
+        for (int i = 0; i < names.length; i++) {
+            names[i] = Provinsi.provinsis[i].getName();
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                inflater.getContext(), android.R.layout.simple_list_item_1,
+                names);
+        setListAdapter(adapter);
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
-    public void setJawaBarat(long id) {
-        this.jawabaratId = id;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.listener = (Listener)context;
     }
     @Override
-    public void onStart() {
-        super.onStart();
-        View view = getView();
-        if (view != null) {
-            TextView title = (TextView) view.findViewById(R.id.textTitle);
-            JawaBarat JB = JawaBarat.JB[(int) jawabaratId];
-            title.setText(JB.getName());
-            TextView description = (TextView) view.findViewById(R.id.textDescription);
-            description.setText(JB.getDescription());
+    public void onListItemClick(ListView listView, View itemView, int position, long id) {
+        if (listener != null) {
+            listener.itemClicked(id);
         }
     }
 }

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context="com.example.indonesiastruktur.MainActivity" >
-<ListView
-    android:id="@+id/list_provinsi"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:entries="@array/indonesia"
-    />
+    android:layout_height="match_parent">
+    <fragment
+        android:id="@+id/fragment_detail_prop"
+        android:name="com.example.indonesiastruktur.ListProvFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

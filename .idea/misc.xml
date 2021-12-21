@@ -4,13 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_detail.xml" value="0.209375" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_detail_jawabarat.xml" value="0.1" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_indonesia.xml" value="0.18" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_jawa_barat.xml" value="0.5" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_jawa_timur.xml" value="0.1" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_jawabarat.xml" value="0.20615384615384616" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_jawatengah.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_jawatimur.xml" value="0.2046875" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_kabupaten_list.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_list_fragment.xml" value="0.18854166666666666" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_main.xml" value="0.23880597014925373" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/activity_splash_screen.xml" value="0.2046875" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_detail.xml" value="0.18854166666666666" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_indonesia_detail.xml" value="0.1" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawa_barat.xml" value="0.209375" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawa_tengah_list.xml" value="0.1" />
@@ -19,7 +24,12 @@
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawabarat_detail.xml" value="0.209375" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawabarat_list.xml" value="0.1" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawatengah_detail.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawatengah_list.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawatimur_detail.xml" value="0.1" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_jawatimur_list.xml" value="0.1" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_kabupaten_detail.xml" value="0.2046875" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_list_kabupaten.xml" value="0.18854166666666666" />
+        <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_lst_provinsi.xml" value="0.2046875" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_provinsi_detail.xml" value="0.1" />
         <entry key="..\:/Bootcamp/IndonesiaStruktur/app/src/main/res/layout/fragment_provinsi_list.xml" value="0.209375" />
       </map>

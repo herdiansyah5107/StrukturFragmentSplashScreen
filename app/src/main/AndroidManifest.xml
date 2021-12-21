@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.indonesiastruktur">
+    package="com.example.indonesiastruktur" >
 
     <application
         android:allowBackup="true"
@@ -8,36 +8,34 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.IndonesiaStruktur">
+        android:theme="@style/Theme.IndonesiaStruktur" >
+        <activity
+            android:name=".KabupatenListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KabupatenActivityFragment"
+            android:exported="false" />
+        <activity
+            android:name=".DetailFragment"
+            android:exported="true" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".JawaTengahActivity"
             android:exported="false" />
         <activity
-            android:name=".JawaTimurActivity"
-            android:exported="false" />
-        <activity
-            android:name=".JawaBaratActivity"
-            android:exported="false" />
-        <activity
             android:name=".DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Indonesia"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

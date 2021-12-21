@@ -1,5 +1,6 @@
 package com.example.indonesiastruktur;
 
+
 import android.content.Context;
 import android.os.Bundle;
 
@@ -14,10 +15,13 @@ import android.widget.ListView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link JawaBaratListFragment#newInstance} factory method to
+ * Use the {@link ListKabFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class JawaBaratListFragment extends ListFragment {
+public class ListKabFragment extends ListFragment {
+
+    private Listener listener;
+    private long propId;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,9 +31,8 @@ public class JawaBaratListFragment extends ListFragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private Listener listener;
 
-    public JawaBaratListFragment() {
+    public ListKabFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +42,11 @@ public class JawaBaratListFragment extends ListFragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ProvinsiList.
+     * @return A new instance of fragment ListKabFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static JawaBaratListFragment newInstance(String param1, String param2) {
-        JawaBaratListFragment fragment = new JawaBaratListFragment();
+    public static ListKabFragment newInstance(String param1, String param2) {
+        ListKabFragment fragment = new ListKabFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,29 +63,53 @@ public class JawaBaratListFragment extends ListFragment {
         }
     }
 
-    //memanggil fraement yangsudah siap membaca di activity
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        String[] names = new String[JawaBarat.JB.length];
-        for (int i = 0; i < names.length; i++) {
-            names[i] = JawaBarat.JB[i].getName();
-        }
-
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                inflater.getContext(), android.R.layout.simple_list_item_1,
-                names);
-        setListAdapter(adapter);
+        // Inflate the layout for this fragment
+//        System.out.println("Mengisi list berdasarkan prop id " +propId);
+//        String[] names = new String[Propinsi.propinsis[(int)propId].getKabupatens().length];
+//        for (int i = 0; i < names.length; i++) {
+//            names[i] = Propinsi.propinsis[(int)propId].getKabupatens()[i].getName();
+//        }
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+//                inflater.getContext(), android.R.layout.simple_list_item_1,
+//                names);
+//        setListAdapter(adapter);
         return super.onCreateView(inflater, container, savedInstanceState);
-
     }
 
+    //    @Override
+    public void onStart() {
+        super.onStart();
+        System.out.println("Mengisi list berdasarkan prop id " +propId);
+        String[] names = new String[Provinsi.provinsis[(int)propId].getKabupatens().length];
+        for (int i = 0; i < names.length; i++) {
+            names[i] = Provinsi.provinsis[(int)propId].getKabupatens()[i].getName();
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                super.getLayoutInflater().getContext(), android.R.layout.simple_list_item_1,
+                names);
+        setListAdapter(adapter);
+    }
+
+    public void setPropId(long id) {
+        this.propId = id;
+        System.out.println("Terima prop id dari activity"+id);
+    }
+    public long getPropId() {
+        return propId;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.listener = (Listener)context;
+    }
     @Override
     public void onListItemClick(ListView listView, View itemView, int position, long id) {
         if (listener != null) {
             listener.itemClicked(id);
         }
-
     }
 }

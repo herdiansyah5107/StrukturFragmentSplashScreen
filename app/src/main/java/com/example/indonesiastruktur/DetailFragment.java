@@ -1,22 +1,23 @@
 package com.example.indonesiastruktur;
 
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.ListFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link JawaTengahListFragment#newInstance} factory method to
+ * Use the {@link DetailFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class JawaTengahListFragment extends ListFragment  {
+public class DetailFragment extends Fragment {
+    private long kabupatenId;
+    private long provinsiId;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,9 +27,8 @@ public class JawaTengahListFragment extends ListFragment  {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private Listener listener;
 
-    public JawaTengahListFragment() {
+    public DetailFragment() {
         // Required empty public constructor
     }
 
@@ -38,11 +38,11 @@ public class JawaTengahListFragment extends ListFragment  {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment JawaTengahListFragment.
+     * @return A new instance of fragment DetailFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static JawaTengahListFragment newInstance(String param1, String param2) {
-        JawaTengahListFragment fragment = new JawaTengahListFragment();
+    public static DetailFragment newInstance(String param1, String param2) {
+        DetailFragment fragment = new DetailFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,24 +63,24 @@ public class JawaTengahListFragment extends ListFragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        String[] names = new String[JawaTengah.JTE.length];
-        for (int i = 0; i < names.length; i++) {
-            names[i] = JawaTengah.JTE[i].getName();
-        }
+        return inflater.inflate(R.layout.fragment_detail, container, false);
+    }
 
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                inflater.getContext(), android.R.layout.simple_list_item_1,
-                names);
-        setListAdapter(adapter);
-        return super.onCreateView(inflater, container, savedInstanceState);
-
+    public void setKab(long provinsiId, long kabupatenId) {
+        this.provinsiId = provinsiId;
+        this.kabupatenId = kabupatenId;
     }
 
     @Override
-    public void onListItemClick(ListView listView, View itemView, int position, long id) {
-        if (listener != null) {
-            listener.itemClicked(id);
-        };
+    public void onStart() {
+        super.onStart();
+        View view = getView();
+        if (view != null) {
+            TextView title = (TextView) view.findViewById(R.id.textTitle);
+            Kabupaten kabupaten = Provinsi.provinsis[(int)provinsiId].getKabupatens()[(int)kabupatenId];
+            title.setText(kabupaten.getName());
+            TextView description = (TextView) view.findViewById(R.id.textDescription);
+            description.setText(kabupaten.getDescription());
+        }
     }
 }
