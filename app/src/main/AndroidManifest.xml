@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.indonesiastruktur" >
 
     <application
@@ -12,12 +13,11 @@
         <activity
             android:name=".KabupatenListActivity"
             android:exported="false" />
-        <activity
-            android:name=".KabupatenActivityFragment"
-            android:exported="false" />
+
         <activity
             android:name=".DetailFragment"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true" >
@@ -27,9 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".JawaTengahActivity"
-            android:exported="false" />
+
         <activity
             android:name=".DetailActivity"
             android:exported="false" />
